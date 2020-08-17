@@ -1,0 +1,48 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-"
+)
+```
+
+# ONEST
+
+The Observers Needed to Evaluate Subjective Tests software implements a statistical method in Reisenbichler et al. (2020^[Reisenbichler, E. S., Han, G., Bellizzi, A., Bossuyt, V., Brock, J., Cole, K., Fadare, O., Hameed, O., Hanley, K., Harrison, B. T., Kuba, M. G., Ly, A., Miller, D., Podoll, M., Roden, A. C., Singh, K., Sanders, M. A., Wei, S., Wen, H., Pelekanou, V., Yaghoobi, V., Ahmed, F., Pusztai, L., and Rimm, D. L. (2020) “Prospective multi-institutional evaluation of pathologist assessment of PD-L1 assays for patient selection in triple negative breast cancer," Mod Pathol, DOI: 10.1038/s41379-020-0544-x; PMID: 32300181.]), to determine the minimum number of evaluators needed to estimate agreement involving a large number of raters. This method could be utilized by regulatory agencies, such as the FDA, when evaluating agreement levels of a newly proposed subjective laboratory test. Input to the program should be binary(1/0) pathology data, where “0” may stand for negative and “1” for positive. The example datasets in this software are from Rimm et al. (2017^[Rimm, D. L., Han, G., Taube, J. M., Yi, E. S., Bridge, J. A., Flieder, D. B., Homer, R., West, W. W., Wu, H., Roden, A. C., Fujimoto, J., Yu, H., Anders, R., Kowalewski, A., Rivard, C., Rehman, J., Batenchuk, C., Burns, V., Hirsch, F. R., and Wistuba,, II (2017) “A Prospective, Multi-institutional, Pathologist-Based Assessment of 4 Immunohistochemistry Assays for PD-L1 Expression in Non-Small Cell Lung Cancer," JAMA Oncol, 3(8), 1051-1058, DOI: 10.1001/jamaoncol.2017.0013, PMID: 28278348.]) (the SP142 assay), and  Reisenbichler et al. 2020. This program can run in R version 3.5.0 and above.
+
+
+
+## Installation
+
+You can install RPEXE.RPEXT from github with:
+
+```{r gh-installation, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("hangangtrue/ONEST")
+```
+
+You can also install the released version of ONEST from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("ONEST")
+```
+
+## Example
+
+This is a basic example which shows you how this software works:
+
+```{r example}
+library(ONEST)
+
+# load in the sp142_bin dataset
+data('sp142_bin')
+ONEST_main(sp142_bin)
+```
+
+Some more details and examples can be found in vignettes of the package.
