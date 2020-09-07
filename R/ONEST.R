@@ -74,3 +74,17 @@ NULL
 #' [1] Rimm DL, Han G, Taube JM, Yi ES, Bridge JA, Flieder DB, et al. A Prospective, Multi-institutional, Pathologist-Based Assessment of 4 Immunohistochemistry Assays for PD-L1 Expression in Non-Small Cell Lung Cancer. JAMA Oncol. 2017;3(8):1051-8, DOI: 10.1001/jamaoncol.2017.0013, PMID: 28278348.
 NULL
 
+#' Precomputed dataset
+#'
+#' A precomputed dataset only used by the ONEST_vignettes function to create the vignettes.
+#'
+#' \itemize{
+#'   \item columns : different permutations
+#'   \item rows : agreement percentage
+#' }
+#' @docType data
+#' @keywords datasets
+#' @name empirical
+#' @usage data('empirical')
+NULL
+
