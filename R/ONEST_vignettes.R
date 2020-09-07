@@ -1,16 +1,16 @@
-#' @title ONEST main function
+#' @title ONEST vignettes function
 #'
-#' @description This is the ONEST main function taking binary (0/1) pathology data as input. This function
-#' utilizes the plotline function to produce the ONEST graphs and estimates.
+#' @description This function is only used to create vignettes. Although it can get the same results from ONEST_main(sp142_bin), it uses some precomputed data to decrease the time to get the results. Therefore, it can only be applied to the sp142_bin dataset. Please use ONEST_main instead.
 #'
 #' @param data a matrix containing the binary pathology data. Each row is the data from one case, and each column is the data from one rater. Missing values are allowed and can be denoted as NA or left blank. If there are n cases and k raters, the input ‘data’ is a matrix with dimension n by k.
+#' @param empirical a matrix containing data used to plot the empirical confidence intervals for the sp142_bin dataset.
 #'
 #' @importFrom graphics barplot
 #' @importFrom graphics lines
 #' @importFrom graphics legend
 #' @importFrom stats quantile
 #'
-#' @usage ONEST_main(data)
+#' @usage ONEST_vignettes(data,empirical)
 #'
 #' @return
 #' consist_p: a vector of length k-1, indicating proportion of identical reads among a set of pathologists. For example, the first element of “consist_p” is the estimate of agreement percentage for 2 raters. The k-1 th element is the estimate of agreement percentage for k raters.
@@ -37,9 +37,10 @@
 #' @export
 #'
 #' @examples
-#' data("sp142_bin")
-#' \donttest{ONEST_main(sp142_bin)}
-ONEST_main = function(data){
+#' data('sp142_bin')
+#' data('empirical')
+#' ONEST_vignettes(sp142_bin,empirical)
+ONEST_vignettes = function(data,empirical){
 
   # Size of the data
   n = nrow(data)
@@ -55,10 +56,7 @@ ONEST_main = function(data){
   lines(0,0,main="Figure(1)")
 
   # 2) Plot 100 randomly chosen permutations
-  concord = matrix(rep(0,100*M),ncol=100)
-  for (i in 1:100) {
-    concord[,i] = plotline(data[,sample(m)],0)
-  }
+  concord = empirical[,1:100]
   x_axis = 2:m
   plot(x_axis,concord[,100], type = "o", col = color,lwd=1.8,xlim=c(2,m),ylim=c(0,1),main="Figure(2)",
        xlab = 'Number of raters',ylab='Proportion of identical reads')
@@ -67,13 +65,7 @@ ONEST_main = function(data){
   }
 
   # 3) Plot the empirical confidence interval
-  simN = 1000
-  D = matrix(rep(0,simN*(m-1)),ncol=simN)
-  D[,1:100]=concord
-  for (i in 101:simN){
-    D[,i]  = plotline(data[,sample(m)],0)
-  }
-
+  D=empirical
   # Calculate mean, 5 th, and 95 th percentiles
   plot_data = matrix(rep(0,3*(m-1)),ncol=3)
   for (j in 1:M){
