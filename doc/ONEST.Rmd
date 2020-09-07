@@ -89,6 +89,7 @@ data("sp142_bin")
 ```
 
 ## 4.2 Plot the data and get the outputs
+The following code is equivalent to ONEST_main(sp142_bin) and can only be applied to the example dataset sp142_bin to decrease the time to build the vignettes. Please use the ONEST_main function instead in practice.
 
 ```{r}
 # figure(1): Plot of the agreement percentage in the order of columns in the inputs;
@@ -98,7 +99,9 @@ data("sp142_bin")
 # figure(5): Plot of the proportion of identical reads among a set of pathologists;
 # figure(6): Plot of the difference between the proportion of identical reads among a set of pathologists;
 
-ONEST_main(sp142_bin)
+# ONEST_main(sp142_bin)
+data('empirical')
+ONEST_vignettes(sp142_bin,empirical)
 ```
 
 ## 4.3 Code to run other examples 

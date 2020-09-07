@@ -1,11 +1,12 @@
 Package: ONEST
 Title: Observers Needed to Evaluate Subjective Tests
 Version: 0.0.1
-Authors@R: c(person("Baihong", "Guo", role = "aut", email = "ragerguo1023@gmail.com"),person("Gang", "Han", role = c("aut", "cre"),
-                     email = "hangang.true@gmail.com"))
+Authors@R: c(person("Gang", "Han", role = c("aut", "cre"),
+                     email = "hangang.true@gmail.com"),
+              person("Baihong", "Guo", role = "aut", email = "ragerguo1023@gmail.com"))
 Author: Gang Han [aut, cre],
   Baihong Guo [aut]
-Maintainer: Baihong Guo <ragerguo1023@gmail.com> 
+Maintainer: Gang Han <hangang.true@gmail.com> 
 URL: https://github.com/hangangtrue/ONEST
 BugReports: https://github.com/hangangtrue/ONEST/issues
 Description: 

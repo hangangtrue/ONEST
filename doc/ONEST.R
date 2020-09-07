@@ -20,7 +20,9 @@ data("sp142_bin")
 # figure(5): Plot of the proportion of identical reads among a set of pathologists;
 # figure(6): Plot of the difference between the proportion of identical reads among a set of pathologists;
 
-ONEST_main(sp142_bin)
+# ONEST_main(sp142_bin)
+data('empirical')
+ONEST_vignettes(sp142_bin,empirical)
 
 ## -----------------------------------------------------------------------------
 # (1) With example dataset sp263_bin:
