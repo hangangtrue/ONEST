@@ -20,7 +20,7 @@ The Observers Needed to Evaluate Subjective Tests software implements a statisti
 
 ## Installation
 
-You can install RPEXE.RPEXT from github with:
+You can install ONEST from github with:
 
 ```{r gh-installation, eval = FALSE}
 # install.packages("devtools")

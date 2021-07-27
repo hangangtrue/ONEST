@@ -74,6 +74,22 @@ NULL
 #' [1] Rimm DL, Han G, Taube JM, Yi ES, Bridge JA, Flieder DB, et al. A Prospective, Multi-institutional, Pathologist-Based Assessment of 4 Immunohistochemistry Assays for PD-L1 Expression in Non-Small Cell Lung Cancer. JAMA Oncol. 2017;3(8):1051-8, DOI: 10.1001/jamaoncol.2017.0013, PMID: 28278348.
 NULL
 
+#' Example dataset5
+#'
+#' NCCN 22c3 tumor data from Rimm et al. (2017) used to illustrate the ONEST method.
+#'
+#' \itemize{
+#'   \item columns : different raters
+#'   \item rows : different cases
+#' }
+#' @docType data
+#' @keywords datasets
+#' @name NCCN_22c3_t
+#' @usage data('NCCN_22c3_t')
+#' @references
+#' [1] Rimm DL, Han G, Taube JM, Yi ES, Bridge JA, Flieder DB, et al. A Prospective, Multi-institutional, Pathologist-Based Assessment of 4 Immunohistochemistry Assays for PD-L1 Expression in Non-Small Cell Lung Cancer. JAMA Oncol. 2017;3(8):1051-8, DOI: 10.1001/jamaoncol.2017.0013, PMID: 28278348.
+NULL
+
 #' Precomputed dataset
 #'
 #' A precomputed dataset only used by the ONEST_vignettes function to create the vignettes.
