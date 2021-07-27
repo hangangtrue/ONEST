@@ -104,17 +104,28 @@ data('empirical')
 ONEST_vignettes(sp142_bin,empirical)
 ```
 
-## 4.3 Code to run other examples 
+## 4.3 The ONEST score test
+A small p-value from this score test indicates significant
+evidence that the observers’ agreement will converge to a non-zero proportion.
+```{r}
+data("sp142_bin")
+ONEST_inflation_test(sp142_bin)
+```
+
+## 4.4 Code to run other examples 
 
 ```{r}
 # (1) With example dataset sp263_bin:
-# data("sp263_bin") ONEST_main(sp263_bin)
+# data("sp263_bin") ONEST_main(sp263_bin) ONEST_inflation_test(sp263_bin)
 
 # (2) With example dataset NCNN_sp142:
-# data("NCCN_sp142") ONEST_main(NCCN_sp142)
+# data("NCCN_sp142") ONEST_main(NCCN_sp142) ONEST_inflation_test(NCCN_sp142)
 
 # (3) With example dataset NCNN_sp142_t:
-# data("NCCN_sp142_t") ONEST_main(NCCN_sp142_t) 
+# data("NCCN_sp142_t") ONEST_main(NCCN_sp142_t) ONEST_inflation_test(NCCN_sp142_t)
+
+# (4) With example dataset NCCN_22c3_t:
+# data("NCCN_22c3_t") ONEST_main(NCCN_22c3_t) ONEST_inflation_test(NCCN_22c3_t)
 
 ```
 

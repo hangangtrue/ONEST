@@ -25,13 +25,20 @@ data('empirical')
 ONEST_vignettes(sp142_bin,empirical)
 
 ## -----------------------------------------------------------------------------
+data("sp142_bin")
+ONEST_inflation_test(sp142_bin)
+
+## -----------------------------------------------------------------------------
 # (1) With example dataset sp263_bin:
-# data("sp263_bin") ONEST_main(sp263_bin)
+# data("sp263_bin") ONEST_main(sp263_bin) ONEST_inflation_test(sp263_bin)
 
 # (2) With example dataset NCNN_sp142:
-# data("NCCN_sp142") ONEST_main(NCCN_sp142)
+# data("NCCN_sp142") ONEST_main(NCCN_sp142) ONEST_inflation_test(NCCN_sp142)
 
 # (3) With example dataset NCNN_sp142_t:
-# data("NCCN_sp142_t") ONEST_main(NCCN_sp142_t) 
+# data("NCCN_sp142_t") ONEST_main(NCCN_sp142_t) ONEST_inflation_test(NCCN_sp142_t)
+
+# (4) With example dataset NCCN_22c3_t:
+# data("NCCN_22c3_t") ONEST_main(NCCN_22c3_t) ONEST_inflation_test(NCCN_22c3_t)
 
 
